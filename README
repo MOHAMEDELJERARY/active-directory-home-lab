@@ -1,0 +1,70 @@
+# Active Directory Home Lab (Windows Server 2019)
+
+This project documents the design, deployment, and validation of a small Active Directory environment built in a virtualized home lab. The goal of the lab was to gain hands-on experience with core Windows enterprise infrastructure components and to document the process in a clear, reproducible way.
+
+The environment simulates a small organization with centralized identity management, automated IP address assignment, internal DNS resolution, and controlled outbound network access for client systems.
+
+---
+
+## Lab Architecture Overview
+
+**Domain Controller (Windows Server 2019)**
+- Active Directory Domain Services (AD DS)
+- DNS (authoritative for the domain)
+- DHCP (internal address scope)
+- RRAS / Network Address Translation (NAT)
+
+**Client System (Windows 10 Pro)**
+- Joined to the Active Directory domain
+- Receives IP configuration via DHCP
+- Authenticates using domain user accounts
+
+The lab was implemented using VirtualBox with separate internal and external network interfaces to simulate enterprise-style network segmentation.
+
+---
+
+## Key Skills Demonstrated
+
+- Active Directory domain deployment and management
+- DNS configuration and dependency management for AD
+- DHCP scope creation and Active Directory authorization
+- Internal-to-external routing using RRAS/NAT
+- Domain join and client authentication validation
+- Bulk user provisioning using PowerShell
+- Technical documentation and validation of system behavior
+
+---
+
+## Validation and Outcomes
+
+The environment was verified through the following checks:
+
+- Successful installation and configuration of AD DS
+- DNS resolution for internal and external domains
+- DHCP lease assignment to the Windows 10 client
+- Domain join and object creation in Active Directory
+- Authentication using domain user credentials on the client
+- Verified outbound connectivity via the Domain Controller
+
+These validations confirm that the lab environment functions as intended and reflects a realistic small-scale Active Directory deployment.
+
+---
+
+## Documentation
+
+Full step-by-step documentation, screenshots, and verification evidence are provided in the PDF below:
+
+**[ActiveDirectory_HomeLab_WindowsServer2019.pdf](docs/ActiveDirectory_HomeLab_WindowsServer2019.pdf)**
+
+---
+
+## Future Enhancements
+
+- Group Policy Object (GPO) configuration
+- Additional Organizational Unit (OU) design
+- Secondary Domain Controller for redundancy
+- Security auditing and event log monitoring
+
+---
+
+This project was completed as hands-on practice with enterprise Windows infrastructure concepts.
